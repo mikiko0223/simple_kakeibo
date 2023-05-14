@@ -15,7 +15,19 @@ $title=$_POST['title'];
 $amount=$_POST['amount'];
 $type=$_POST['type'];
 
+$sql="INSERT INTO records(title,type,amount,date,created_at,updated_at)VALUES(:title,:type,:amount,:date,now(),now())";
 
+//先ほど作成したSQLを実行できるように準備
+$stmt=$pdo->prepare($sql);
+
+//値の設定
+$stmt->bindParam(':title',$title,PDO::PARAM_STR);
+$stmt->bindParam(':type',$type,PDO::PARAM_INT);
+$stmt->bindParam(':amount',$amount,PDO::PARAM_INT);
+$stmt->bindParam(':date',$date,PDO::PARAM_STR);
+
+//sqlを実行
+$stmt->execute();
 
 
 ?>
