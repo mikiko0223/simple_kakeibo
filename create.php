@@ -28,6 +28,8 @@ $stmt->bindParam(':date',$date,PDO::PARAM_STR);
 
 //sqlを実行
 $stmt->execute();
+header('Location: ./index.php');
+exit;
 
 
 ?>
