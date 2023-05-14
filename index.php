@@ -1,3 +1,25 @@
+<?php
+
+include_once('./dbconnect.php');
+//処理の流れ
+//1.DBへの接続
+//2.recordsテーブルのデータを全件取得
+//3.全データを画面に表示
+
+//SQL文を作成
+$sql="SELECT * FROM records";
+//SQL文の実行準備
+$stmt=$pdo->prepare($sql);
+//SQLの実行
+$stmt->execute();
+
+//全データを変数に入れる
+$records=$stmt->fetchAll();
+
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="ja">
 <head>
