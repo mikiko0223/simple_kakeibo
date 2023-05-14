@@ -11,9 +11,9 @@ include_once('./dbconnect.php');
 //4.index.phpに移動
 
 $date=$_POST['date'];
-$date=$_POST['title'];
-$date=$_POST['amount'];
-$date=$_POST['type'];
+$title=$_POST['title'];
+$amount=$_POST['amount'];
+$type=$_POST['type'];
 
 
 
