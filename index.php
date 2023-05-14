@@ -71,7 +71,7 @@ $records=$stmt->fetchAll();
 
             <?php foreach($records as $record):?>
               <tr>
-                <td class="col-2"><?php echo h($record['date']);?>/td>
+                <td class="col-2"><?php echo h($record['date']);?></td>
                 <td class="col-3"><?php echo h($record['title']);?></td>
                 <td class="col-2"><?php echo h($record['type'])==0 ? h($record['amount']) :'' ?></td>
                 <td class="col-2"><?php echo h($record['type'])==1 ? h($record['amount']) :'' ?></td>
